@@ -1,31 +1,64 @@
-body {
-    background-color: black;
-    color: white;
-    font-family: Arial, sans-serif;
-}
-
-.welcome-screen, .game-screen {
-    display: flex;
+/* Styles specific to the landing page */
+#landing-page {
+        background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQX6-7Bsr2SBkBMmexumXKdaCOd5p6MvPISQTHfuYJJfQ&s');
+    background-size: cover;
+    background-position: center;
+display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100vh;
+    height: 100%;
+    padding: 20px;
 }
 
-.hidden {
-    display: none;
+#landing-page div {
+    margin-bottom: 15px; /* Adds bottom margin to each div for spacing */
 }
 
-.products, .descriptions {
+/* Styles specific to the game page */
+#game-page {
+            background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQX6-7Bsr2SBkBMmexumXKdaCOd5p6MvPISQTHfuYJJfQ&s');
+    background-size: cover;
+    background-position: center;display: flex;
+    flex-direction: row; /* Maintain original row layout for game elements */
+    align-items: start;
+    justify-content: center;
+    height: 100%;
+    padding: 20px;
+}
+
+#game-page .draggable-container,
+#game-page .droppable-container {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    width: 50%; /* Adjust if necessary to fit content */
+    margin: 0 20px;
 }
 
-.product, .description {
-    border: 2px solid #EAB330;
+.draggable, .droppable {
+    width: 90%; /* Full width within the container */
     padding: 10px;
-    margin: 5px;
+    margin-bottom: 10px;
+    border: 2px solid #ff00f3;
+    background-color: #444;
+    text-align: center;
+    color: white;
     cursor: pointer;
+    font-size: 0.8em;
+    border-radius: 8px;
+    box-shadow: 2px 2px 4px #222;
+}
+
+.droppable {
+    height: auto;
+    min-height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    overflow: visible;
 }
 
 .correct {
@@ -34,13 +67,5 @@ body {
 
 .incorrect {
     background-color: red;
-}
-
-.progress {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    text-align: center;
-    background-color: #CA0088;
-    color: white;
+    animation: flash 0.5s;
 }

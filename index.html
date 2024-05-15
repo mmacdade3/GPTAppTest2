@@ -3,28 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How well do you know Amdocs products and services?</title>
     <link rel="stylesheet" href="styles.css">
-    <title>Amdocs Product Matcher</title>
 </head>
 <body>
-    <div class="welcome-screen">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1qZ3uLNobr-mg4jbh5KunJHrlAAoU7h6zFEytRCuQ&s" alt="Amdocs Logo">
-        <input type="text" id="username" placeholder="Enter your name">
-        <button onclick="startGame()">Start</button>
+    <div id="landing-page" class="page">
+        <div>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1qZ3uLNobr-mg4jbh5KunJHrlAAoU7h6zFEytRCuQ&s" alt="Amdocs Logo">
+        </div>
+        <div>
+            <input type="text" id="player-name" placeholder="Enter your name">
+        </div>
+        <div>
+            <button onclick="startGame()">Start Game</button>
+        </div>
     </div>
-    <div class="game-screen hidden">
-        <div class="products">
-            <div id="prod1" class="product" draggable="true">Amdocs Customer Experience Suite</div>
-            <div id="prod2" class="product" draggable="true">Amdocs Media Marketplace</div>
-            <div id="prod3" class="product" draggable="true">Amdocs Intelligent Operations</div>
+    <div id="game-page" class="page" style="display:none;">
+        <div id="products" class="draggable-container">
+            <!-- Drag items -->
         </div>
-        <div class="descriptions">
-            <div id="desc1" class="description" data-product-id="prod3">Optimize service operations with AI-driven insights.</div>
-            <div id="desc2" class="description" data-product-id="prod1">Enhance customer service through a unified platform.</div>
-            <div id="desc3" class="description" data-product-id="prod2">Provides a platform for content, service discovery, and user engagement.</div>
-        </div>
-        <div class="progress">
-            Progress: <span id="progress-percentage">0%</span>
+        <div id="descriptions" class="droppable-container">
+            <!-- Drop areas -->
         </div>
     </div>
     <script src="script.js"></script>
