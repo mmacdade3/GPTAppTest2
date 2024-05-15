@@ -1,0 +1,46 @@
+body {
+    background-color: black;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+.welcome-screen, .game-screen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.hidden {
+    display: none;
+}
+
+.products, .descriptions {
+    display: flex;
+    justify-content: space-between;
+}
+
+.product, .description {
+    border: 2px solid #EAB330;
+    padding: 10px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.correct {
+    background-color: green;
+}
+
+.incorrect {
+    background-color: red;
+}
+
+.progress {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    background-color: #CA0088;
+    color: white;
+}
